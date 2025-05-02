@@ -46,10 +46,23 @@ export class AppComponent implements OnInit {
   selectedPolicy: any = null;
   showEditModal = false;
   filterText = '';
+  showAddModal = false;
+  
+  newPolicy = {
+    policyHolderName: '',
+    policyNumber: '',
+    premiumAmount:0,
+    policyType: '',
+    isActive: false
+  };
+  
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+
+  private apiUrl = 'http://localhost:7234/api/InsurancePolicy';
+    
 
   constructor(private http: HttpClient) { }
+
 
   ngOnInit(): void {
     this.fetchPolicies();
@@ -64,7 +77,7 @@ export class AppComponent implements OnInit {
 
   filterPolicies(): void {
     this.filteredPolicies = this.policies.filter(p =>
-      p.title.toLowerCase().includes(this.filterText.toLowerCase())
+      p.policyHolderName.toLowerCase().includes(this.filterText.toLowerCase())
     );
   }
 
@@ -96,4 +109,29 @@ export class AppComponent implements OnInit {
   closeModal(): void {
     this.showEditModal = false;
   }
+  openAddModal(): void {
+    this.newPolicy = {
+      policyHolderName: '',
+      policyNumber: '',
+      premiumAmount:0,
+      policyType: '',
+      isActive: false
+    };
+    this.showAddModal = true;
+  }
+  
+  addPolicy(): void {
+    console.log('Payload before API call:', this.newPolicy);
+    this.http.post(this.apiUrl, this.newPolicy).subscribe((res: any) => {
+      this.policies.push(res);
+    
+      this.filterPolicies();
+      this.showAddModal = false;
+    });
+  }
+  
+  closeAddModal(): void {
+    this.showAddModal = false;
+  }
+  
 }

@@ -16,3 +16,192 @@
     width: 300px;
     border-radius: 6px;
 }
+
+.modal {
+    z-index: 1000;
+  }
+  .policy-details {
+    margin-top: 15px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: fit-content;
+    background-color: #f9f9f9;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 8px;
+  }
+  
+  .label {
+    font-weight: bold;
+    width: 160px;
+    color: #333;
+  }
+  
+  .value {
+    color: #555;
+  }
+  .modals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modals-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-weight: 500;
+  }
+  
+  button.cancel {
+    background-color: #dc3545;
+  }
+  
+  /* Modal container */
+.modaladd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content box */
+  .modaladd-content {
+    background: #fff;
+    padding: 2rem;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Modal title */
+  .modaladd-content h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Labels and inputs */
+  .modaladd-content label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .modaladd-content input,
+  .modaladd-content select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Buttons */
+  .modaladd-content button {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem 0.25rem 0 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .modaladd-content button:first-of-type {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modaladd-content button:first-of-type:hover {
+    background-color: #0056b3;
+  }
+  
+  .modaladd-content button:last-of-type {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .modaladd-content button:last-of-type:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
