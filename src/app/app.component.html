@@ -217,45 +217,45 @@
   </div>
 </div>
 
-<!-- Add Modal -->
-<div *ngIf="showAddModal" class="modaladd">
-  <div class="modaladd-content">
-    <h3>Add Policy</h3>
-  
-    <label>
-      PolicyHolderName:
-      <input [(ngModel)]="newPolicy.policyHolderName" />
-    </label>
-  
-    <label>
-      PolicyNumber:
-      <input [(ngModel)]="newPolicy.policyNumber" />
-    </label>
-  
-    <label>
-      PolicyAmount:
-      <input type="number" [(ngModel)]="newPolicy.premiumAmount" />
-    </label>
-  
-    <label>
-      PolicyType:
-      <input [(ngModel)]="newPolicy.policyType" />
-    </label>
-  
-    <label>
-      Status:
-      <select [(ngModel)]="newPolicy.isActive">
-        <option [ngValue]="true">Active</option>
-        <option [ngValue]="false">Inactive</option>
-      </select>
-    </label>
-  
-  
+    <!-- Add Modal -->
+    <div *ngIf="showAddModal" class="modaladd">
+      <div class="modaladd-content">
+        <h3>Add Policy</h3>
+      
+        <label>
+          PolicyHolderName:
+          <input [(ngModel)]="newPolicy.policyHolderName" />
+        </label>
+      
+        <label>
+          PolicyNumber:
+          <input [(ngModel)]="newPolicy.policyNumber" />
+        </label>
+      
+        <label>
+          PolicyAmount:
+          <input type="number" [(ngModel)]="newPolicy.premiumAmount" />
+        </label>
+      
+        <label>
+          PolicyType:
+          <input [(ngModel)]="newPolicy.policyType" />
+        </label>
+      
+        <label>
+          Status:
+          <select [(ngModel)]="newPolicy.isActive">
+            <option [ngValue]="true">Active</option>
+            <option [ngValue]="false">Inactive</option>
+          </select>
+        </label>
+      
+      
 
-    <button (click)="addPolicy()">Save</button>
-    <button (click)="closeAddModal()">Cancel</button>
-  </div>
-</div>
+        <button (click)="addPolicy()">Save</button>
+        <button (click)="closeAddModal()">Cancel</button>
+      </div>
+    </div>
 
 
 
